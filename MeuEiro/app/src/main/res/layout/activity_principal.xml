@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/linear_background_prin"
+    tools:context=".activity.PrincipalActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <include layout="@layout/content_principal" />
+
+    <com.github.clans.fab.FloatingActionButton
+        android:id="@+id/menu_despesa"
+        android:onClick="adicionarDespesa"
+        android:layout_gravity="bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:src="@drawable/ic_money_off_white_24dp"
+        fab:fab_colorNormal="@color/colorPrimaryDespesaIcon"
+        fab:fab_label="Despesa"
+
+        />
+
+    <com.github.clans.fab.FloatingActionButton
+        android:id="@+id/menu_receita"
+        android:onClick="adicionarReceita"
+        android:layout_gravity="end|bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:src="@drawable/ic_attach_money_white_24dp"
+        fab:fab_colorNormal="@color/colorPrimaryReceitaIcon"
+        fab:fab_label="Receita"
+
+        />
+
+</android.support.design.widget.CoordinatorLayout>

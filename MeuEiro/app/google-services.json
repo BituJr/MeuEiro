@@ -1,0 +1,44 @@
+{
+  "project_info": {
+    "project_number": "178371091974",
+    "firebase_url": "https://meueiro.firebaseio.com",
+    "project_id": "meueiro",
+    "storage_bucket": "meueiro.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:178371091974:android:254b82f01993eb98",
+        "android_client_info": {
+          "package_name": "com.example.ivanb.meueiro"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "178371091974-i9fijlppktr38fnujlqh0b465kvu8jja.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.ivanb.meueiro",
+            "certificate_hash": "600e0b50a3e20971eb92b2f5cd894e2ce9a39cff"
+          }
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCtb53f06T9-ccbizK5WGJpZcOPOSJBuxQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "178371091974-2gqdo3bhlsdi3b46af28m36spguvkmr4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
