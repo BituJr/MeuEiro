@@ -20,8 +20,10 @@ public class Usuario {
     private String nome;
     private String email;
     private String senha;
+    private String senha2;
     private Double receitaTotal = 0.00;
     private Double despesaTotal = 0.00;
+
 
     public Usuario() {
     }
@@ -120,5 +122,13 @@ public class Usuario {
 
     public void setSenha(String senha) {
         this.senha = senha;
+    }
+
+    public String getSenha2() {
+        return senha2;
+    }
+
+    public void setSenha2(String senha2) {
+        this.senha2 = senha2;
     }
 }

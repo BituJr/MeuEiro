@@ -22,7 +22,7 @@ import com.google.firebase.auth.FirebaseAuthWeakPasswordException;
 
 public class CadastroActivity extends AppCompatActivity {
 
-    private EditText campoNome, campoEmail, campoSenha;
+    private EditText campoNome, campoEmail, campoSenha, campoSenha2;
     private Button botaoCadastrar;
     private FirebaseAuth autenticacao;
     private Usuario usuario;
@@ -37,6 +37,7 @@ public class CadastroActivity extends AppCompatActivity {
         campoEmail = findViewById(R.id.editEmail);
         campoSenha = findViewById(R.id.editSenha);
         botaoCadastrar = findViewById(R.id.buttonCadastrar);
+        campoSenha2 = findViewById(R.id.editSenha2);
 
         botaoCadastrar.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -45,33 +46,43 @@ public class CadastroActivity extends AppCompatActivity {
                 String textoNome = campoNome.getText().toString();
                 String textoEmail = campoEmail.getText().toString();
                 String textoSenha = campoSenha.getText().toString();
+                String textoSenha2 = campoSenha2.getText().toString();
 
-                if ( !textoNome.isEmpty()){
+                if (!textoNome.isEmpty()) {
 
-                    if ( !textoEmail.isEmpty()){
+                    if (!textoEmail.isEmpty()) {
 
-                        if ( !textoSenha.isEmpty()){
+                        if (!textoSenha.isEmpty()) {
 
-                            usuario = new Usuario();
-                            usuario.setNome(textoNome);
-                            usuario.setEmail(textoEmail);
-                            usuario.setSenha(textoSenha);
+                            if (!textoSenha2.isEmpty()) {
 
-                            cadastrarUsuario();
+                                usuario = new Usuario();
+                                usuario.setNome(textoNome);
+                                usuario.setEmail(textoEmail);
+                                usuario.setSenha(textoSenha);
+                                usuario.setSenha2(textoSenha2);
 
-                        }else {
+                                verificarSenha();
+
+                            } else {
+                                Toast.makeText(CadastroActivity.this,
+                                        "Digite sua senha novamente!",
+                                        Toast.LENGTH_SHORT).show();
+                            }
+
+                        } else {
                             Toast.makeText(CadastroActivity.this,
                                     "Digite sua senha!",
                                     Toast.LENGTH_SHORT).show();
                         }
 
-                    }else {
+                    } else {
                         Toast.makeText(CadastroActivity.this,
                                 "Digite seu email!",
                                 Toast.LENGTH_SHORT).show();
                     }
 
-                }else {
+                } else {
                     Toast.makeText(CadastroActivity.this,
                             "Digite seu nome!",
                             Toast.LENGTH_SHORT).show();
@@ -117,7 +128,18 @@ public class CadastroActivity extends AppCompatActivity {
                             excecao,
                             Toast.LENGTH_SHORT).show();
                 }
+
             }
         });
+    }
+    public void verificarSenha() {
+        if (usuario.getSenha().equals(usuario.getSenha2())) {
+            cadastrarUsuario();
+
+        } else {
+            Toast.makeText(CadastroActivity.this,
+                    "Senhas não correspondem!",
+                    Toast.LENGTH_SHORT).show();
+        }
     }
 }

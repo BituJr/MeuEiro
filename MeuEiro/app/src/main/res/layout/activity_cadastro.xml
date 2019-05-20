@@ -16,7 +16,7 @@
         android:layout_marginEnd="8dp"
         app:layout_constraintBottom_toTopOf="@+id/editNome"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.499"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_chainStyle="packed"
@@ -39,6 +39,7 @@
         android:textColorHint="@android:color/darker_gray"
         app:layout_constraintBottom_toTopOf="@+id/editEmail"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView2" />
 
@@ -47,9 +48,8 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginBottom="8dp"
 
+        android:layout_marginEnd="32dp"
         android:drawableLeft="@drawable/ic_email_cinza_24dp"
         android:drawablePadding="5dp"
         android:ems="10"
@@ -60,6 +60,7 @@
         android:textColorHint="@android:color/darker_gray"
         app:layout_constraintBottom_toTopOf="@+id/editSenha"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editNome" />
 
@@ -68,9 +69,9 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
 
+        android:layout_marginEnd="32dp"
         android:drawableLeft="@drawable/ic_lock_cinza_24dp"
         android:drawablePadding="5dp"
         android:ems="10"
@@ -79,23 +80,49 @@
         android:padding="16dp"
         android:textColor="@android:color/white"
         android:textColorHint="@android:color/darker_gray"
-        app:layout_constraintBottom_toTopOf="@+id/buttonCadastrar"
+        app:layout_constraintBottom_toTopOf="@+id/editSenha2"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editEmail" />
+
+    <EditText
+        android:id="@+id/editSenha2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="32dp"
+
+        android:drawableLeft="@drawable/ic_lock_cinza_24dp"
+        android:drawablePadding="5dp"
+        android:ems="10"
+        android:hint="Confirmar senha"
+        android:inputType="textPassword"
+        android:padding="16dp"
+        android:textColor="@android:color/white"
+        android:textColorHint="@android:color/darker_gray"
+        app:layout_constraintBottom_toTopOf="@+id/buttonCadastrar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editSenha"
+        app:layout_constraintVertical_bias="0.105" />
 
     <Button
         android:id="@+id/buttonCadastrar"
         style="@style/botaoPadrao"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="16dp"
         android:layout_marginBottom="10dp"
         android:text="Cadastrar"
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editSenha" />
+        app:layout_constraintTop_toBottomOf="@+id/editSenha2"
+        app:layout_constraintVertical_bias="0.429" />
 </android.support.constraint.ConstraintLayout>

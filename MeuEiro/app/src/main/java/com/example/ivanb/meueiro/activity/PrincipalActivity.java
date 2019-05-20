@@ -280,6 +280,11 @@ public class PrincipalActivity extends AppCompatActivity {
                 movimentacaoRef.child( movimentacao.getId()).removeValue();
                 adapterMovimentacao.notifyItemRemoved( position );
                 autualizarSaldo();
+
+                    Toast.makeText(PrincipalActivity.this,
+                            "Operação apagada com sucesso",
+                            Toast.LENGTH_SHORT).show();
+                    adapterMovimentacao.notifyItemRemoved(position);
             }
         });
 
